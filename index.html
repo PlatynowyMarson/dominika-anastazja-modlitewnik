@@ -8,6 +8,7 @@
   <title>Modlitewnik Dominiki Anastazji</title>
   <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="aero.css">
   <script src="gallery.js" defer></script>
+  <script src="refren.js" defer></script>
   <style>
     .hero > .hero-motion { position:absolute; inset:0; z-index:-2; width:100%; height:100%; object-fit:cover; object-position:center 36%; filter:brightness(.62) saturate(1.25); }
     .hero > .hero-poster { display:none; }
@@ -18,6 +19,8 @@
       .sponsors { width:min(1152px,calc(100% - 32px)); margin:0 auto 32px; padding:22px 16px 27px; border-top:1px solid var(--line); text-align:center; }
     .sponsors h2 { margin-bottom:14px; font-size:1.55rem; color:var(--violet); }
     .sponsors img { display:block; width:min(156px,55vw); height:auto; margin:0 auto; filter:drop-shadow(0 0 15px #a050cc70); }
+      .audio-toggle { display:block; margin:12px auto 0; padding:4px 8px; border:0; background:#160b25ae; border-radius:5px; color:var(--text); font:inherit; font-size:.9rem; cursor:pointer; }
+    @media (prefers-reduced-motion: reduce) { .audio-toggle { display:none; } }
   </style>
 </head>
 <body>
@@ -32,7 +35,9 @@
         <h1 id="title">Dominika<br>Anastazja</h1>
         <p class="subtitle">✧ Nocne nabożeństwo ✧</p>
         <a class="button" href="#modlitwy">Otwórz modlitewnik</a>
+        <button type="button" class="audio-toggle" aria-pressed="false">Włącz muzykę</button>
       </div>
+      <audio class="hero-audio" src="refren.ogg" loop preload="none"></audio>
       <video class="hero-motion" src="kolysanie-60.mp4" poster="sigilcore-na-moscie.webp" autoplay muted loop playsinline aria-hidden="true"></video>
       <img class="hero-poster" src="sigilcore-na-moscie.webp" alt="Stylizowany portret Dominiki na moście" width="760" height="1350">
     </section>
