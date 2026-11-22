@@ -8,7 +8,7 @@
   <title>Modlitewnik Dominiki Anastazji</title>
   <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="aero.css">
   <script src="gallery.js" defer></script>
-  <script src="refren.js?v=2" defer></script>
+  <script src="refren.js?v=3" defer></script>
   <style>
     .hero > .hero-motion { position:absolute; inset:0; z-index:-2; width:100%; height:100%; object-fit:cover; object-position:center 36%; filter:brightness(.62) saturate(1.25); }
     .hero > .hero-poster { display:none; }
@@ -19,9 +19,19 @@
       .sponsors { width:min(1152px,calc(100% - 32px)); margin:0 auto 32px; padding:22px 16px 27px; border-top:1px solid var(--line); text-align:center; }
     .sponsors h2 { margin-bottom:14px; font-size:1.55rem; color:var(--violet); }
     .sponsors img { display:block; width:min(156px,55vw); height:auto; margin:0 auto; filter:drop-shadow(0 0 15px #a050cc70); }
-      .audio-toggle { display:block; margin:12px auto 0; padding:4px 8px; border:0; background:#160b25ae; border-radius:5px; color:var(--text); font:inherit; font-size:.9rem; cursor:pointer; }
-    @media (prefers-reduced-motion: reduce) { .audio-toggle { display:none; } }
+
+
       .rune-cipher { display:flex; flex-wrap:wrap; column-gap:.62em; row-gap:.34em; color:var(--violet); font:1.22rem/1.4 "Segoe UI Historic","Noto Sans Runic",serif; letter-spacing:.1em; text-shadow:0 0 12px #ae5bec; }
+      .prayers { max-width:1152px; display:grid; grid-template-columns:minmax(0,1fr) minmax(0,6fr) minmax(0,1fr); column-gap:clamp(6px,1.65vw,24px); align-items:start; }
+    .prayers > .section-head, .prayers > .prayer { grid-column:2; }
+    .prayer-puma { width:100%; max-width:157px; height:auto; align-self:center; grid-row:1 / 3; filter:drop-shadow(0 0 15px #bc52e877); }
+    .prayer-puma-left { grid-column:1; justify-self:end; }
+    .prayer-puma-right { grid-column:3; justify-self:start; transform:scaleX(-1); }
+    @media (max-width:630px) {
+      .prayers { grid-template-columns:clamp(38px,13vw,75px) minmax(0,1fr) clamp(38px,13vw,75px); }
+      .prayer-puma { grid-row:1; margin-bottom:24px; }
+      .prayers > .prayer { grid-column:1 / -1; }
+    }
   </style>
 </head>
 <body>
@@ -36,13 +46,15 @@
         <h1 id="title">Dominika<br>Anastazja</h1>
         <p class="subtitle">✧ Nocne nabożeństwo ✧</p>
         <a class="button" href="#modlitwy">Otwórz modlitewnik</a>
-        <button type="button" class="audio-toggle" aria-pressed="false">Włącz muzykę</button>
+
       </div>
       <audio class="hero-audio" src="refren.ogg" loop preload="none"></audio>
       <video class="hero-motion" src="kolysanie-most-pociag.mp4" poster="sigilcore-na-moscie.webp" autoplay muted loop playsinline aria-hidden="true"></video>
       <img class="hero-poster" src="sigilcore-na-moscie.webp" alt="Stylizowany portret Dominiki na moście" width="760" height="1350">
     </section>
     <section id="modlitwy" class="prayers" aria-labelledby="prayer-title">
+      <img class="prayer-puma prayer-puma-left" src="puma-anastacore.webp" alt="" width="300" height="450" loading="lazy">
+      <img class="prayer-puma prayer-puma-right" src="puma-anastacore.webp" alt="" width="300" height="450" loading="lazy">
       <header class="section-head">
         <p class="sigil" aria-hidden="true">◇ ── ✞ ── ◇</p>
         <h2 id="prayer-title">Modlitewnik</h2>
