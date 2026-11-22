@@ -32,6 +32,11 @@
       .prayer-puma { grid-row:1; margin-bottom:24px; }
       .prayers > .prayer { grid-column:1 / -1; }
     }
+      .hero .hero-coin { position:absolute; top:clamp(40px,12%,100px); z-index:0; width:clamp(48px,14vw,172px); aspect-ratio:1; pointer-events:none; filter:drop-shadow(0 0 13px #bd58eb88); }
+    .hero .hero-coin-left { left:clamp(12px,3.8vw,54px); }
+    .hero .hero-coin-right { right:clamp(12px,3.8vw,54px); }
+    .hero .hero-coin img { display:block; position:static; width:100%; height:100%; max-height:none; object-fit:contain; filter:none; }
+    @media(max-width:700px) { .hero .hero-coin { top:26px; width:clamp(60px,18vw,115px); } }
   </style>
 </head>
 <body>
@@ -41,6 +46,8 @@
   </header>
   <main>
     <section class="hero" aria-labelledby="title">
+      <picture class="hero-coin hero-coin-left" aria-hidden="true"><source media="(prefers-reduced-motion: reduce)" srcset="sponsor-pumy.webp"><img src="pumy-moneta.gif" alt="" width="236" height="236"></picture>
+      <picture class="hero-coin hero-coin-right" aria-hidden="true"><source media="(prefers-reduced-motion: reduce)" srcset="sponsor-pumy.webp"><img src="pumy-moneta.gif" alt="" width="236" height="236"></picture>
       <div class="hero-copy">
         <p class="eyebrow">Modlitewnik · wydanie Aero</p>
         <h1 id="title">Dominika<br>Anastazja</h1>
