@@ -15,6 +15,9 @@
       .hero > .hero-motion { display:none; }
       .hero > .hero-poster { display:block; }
     }
+      .sponsors { width:min(1152px,calc(100% - 32px)); margin:0 auto 32px; padding:22px 16px 27px; border-top:1px solid var(--line); text-align:center; }
+    .sponsors h2 { margin-bottom:14px; font-size:1.55rem; color:var(--violet); }
+    .sponsors img { display:block; width:min(156px,55vw); height:auto; margin:0 auto; filter:drop-shadow(0 0 15px #a050cc70); }
   </style>
 </head>
 <body>
@@ -68,6 +71,10 @@
     </section>
   </main>
   <footer>Dominika Anastazja Shizo Posting <span>Nieoficjalna strona fanowska</span></footer>
+  <section class="sponsors" aria-labelledby="sponsor-title">
+    <h2 id="sponsor-title">Sponsorzy</h2>
+    <img src="sponsor-pumy.webp" alt="Herb Pum Ambasadorstwa Kryształu" width="420" height="420" loading="lazy">
+  </section>
   <dialog aria-label="Podgląd zdjęcia">
     <button class="close" aria-label="Zamknij zdjęcie" autofocus>×</button>
     <figure><img alt=""><figcaption></figcaption></figure>
