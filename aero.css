@@ -1,0 +1,13 @@
+body{background:radial-gradient(ellipse at 51% 7%,#6b2884 0,transparent 27rem),radial-gradient(ellipse at 8% 41%,#351451,transparent 43rem),#07040d}
+.hero{min-height:680px;grid-template-columns:1fr;align-items:center;text-align:center;border-radius:24px;border-color:#dea2ff;background:#10051c}
+.hero img{position:absolute;inset:0;z-index:-2;max-height:none;object-fit:cover;object-position:center 36%;filter:brightness(.62) saturate(1.25)}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse at 50% 42%,#0d061a58,transparent 65%),linear-gradient(0deg,#0b0319e8,transparent 78%)}
+.hero::after{border-radius:18px;box-shadow:inset 0 0 15px #c58aff74}
+.hero-copy{align-self:end;padding:45px 26px 68px}
+.hero h1{text-shadow:0 3px #3e1754,0 0 17px #b456ea,0 0 55px #7a1f9e}
+.hero .eyebrow{display:inline-block;padding:6px 15px;border:1px solid #bc88df99;border-radius:99px;background:#140725aa}
+.prayers .section-head h2{font-family:"Old English Text MT",Georgia,serif}
+.prayer{border-radius:15px;border-color:#af71d8;background:linear-gradient(135deg,#351458a1,#140820e8);box-shadow:inset 0 1px #f5c8ff57,0 0 14px #9628cb59}
+.prayer summary{background:linear-gradient(180deg,#ce8afa38,transparent 49%,#2d104a7c 50%,#3c185696)}
+.tiles figure,.social{border-radius:15px}
+@media(max-width:700px){.hero{min-height:600px}.hero-copy{padding-bottom:47px}}
